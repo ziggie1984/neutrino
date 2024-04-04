@@ -124,6 +124,7 @@ var _ WorkManager = (*peerWorkManager)(nil)
 // NewWorkManager returns a new WorkManager with the regular worker
 // implementation.
 func NewWorkManager(cfg *Config) WorkManager {
+	log.Errorf("NEUTRINO WorkManager")
 	return &peerWorkManager{
 		cfg:        cfg,
 		newBatches: make(chan *batch),
